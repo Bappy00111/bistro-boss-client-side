@@ -20,7 +20,7 @@ const Navber = () => {
                         {navOption}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl hidden lg:block">BISTRO BOSS</a>
+                <a className="btn btn-ghost normal-case text-xl hid lg:block">BISTRO BOSS</a>
             </div>
         
             <div className="navbar-end">
