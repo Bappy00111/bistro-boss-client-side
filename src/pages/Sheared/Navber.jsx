@@ -1,13 +1,24 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Navber = () => {
-    const navOption = <div className='text-black'>
-        <Link><li>Home</li></Link>
-        <Link><li>CONTACT us</li></Link>
-        <Link><li>DASHBOARD</li></Link>
-        <Link><li>Our Menu</li></Link>
-        <Link><li>Our Shop</li></Link>
+    const navOption = <div className='text-black '>
+
+        <ul className='p-10 '>
+            <NavLink to='/'
+                className={({ isActive }) => (isActive ? 'text-yellow-600' : 'default')}
+            ><li className='mb-2'>Home</li></NavLink>
+            <NavLink to='/menuCard'
+                className={({ isActive }) => (isActive ? 'text-yellow-600' : 'default')}
+            ><li className='mb-2'>Our Menu</li></NavLink>
+            <NavLink to='/order'
+                className={({ isActive }) => (isActive ? 'text-yellow-600' : 'default')}
+            ><li className='mb-2'>Order</li></NavLink>
+            <NavLink to='/login'
+                className={({ isActive }) => (isActive ? 'text-yellow-600' : 'default')}
+            ><li className='mb-2'>Login</li></NavLink>
+        </ul>
+
     </div>
     return (
         <div className="navbar fixed max-w-screen-xl z-10 bg-opacity-30 bg-black text-white">
@@ -20,16 +31,24 @@ const Navber = () => {
                         {navOption}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl hid lg:block">BISTRO BOSS</a>
+                <a className="btn btn-ghost normal-case text-xl hidden lg:block">BISTRO BOSS</a>
             </div>
-        
+
             <div className="navbar-end">
-                <ul className='hidden lg:flex space-x-5 px-5'>
-                    <Link><li>Home</li></Link>
-                    <Link><li>CONTACT us</li></Link>
-                    <Link><li>DASHBOARD</li></Link>
-                    <Link><li>Our Menu</li></Link>
-                    <Link><li>Our Shop</li></Link>
+                <ul className='hidden lg:inline-flex space-x-5 px-5'>
+                    {/* {navOption} */}
+                    <NavLink to='/'
+                        className={({ isActive }) => (isActive ? 'text-yellow-600' : 'default')}
+                    ><li>Home</li></NavLink>
+                    <NavLink to='/menuCard'
+                        className={({ isActive }) => (isActive ? 'text-yellow-600' : 'default')}
+                    ><li>Our Menu</li></NavLink>
+                    <NavLink to='/order'
+                        className={({ isActive }) => (isActive ? 'text-yellow-600' : 'default')}
+                    ><li>Order</li></NavLink>
+                    <NavLink to='/login'
+                        className={({ isActive }) => (isActive ? 'text-yellow-600' : 'default')}
+                    ><li className='mb-2'>Login</li></NavLink>
                 </ul>
 
                 <a className="btn">Button</a>

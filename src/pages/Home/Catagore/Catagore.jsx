@@ -16,7 +16,7 @@ const Catagore = () => {
     return (
      
 
-            <section className='md:px-[100px]'>
+            <div className='md:px-[100px]'>
                 <Section
                 subHeading={'---From 11:00am to 10:00pm---'}
                 heading={'ORDER ONLINE'}
@@ -30,7 +30,7 @@ const Catagore = () => {
                         clickable: true,
                     }}
                     modules={[Pagination]}
-                    className="mySwiper m-20"
+                    className="mySwiper "
                 >
                     <SwiperSlide className=''>
                         <img src={slider1} alt="" />
@@ -54,7 +54,7 @@ const Catagore = () => {
                     </SwiperSlide>
 
                 </Swiper>
-            </section>
+            </div>
         
     );
 };
